@@ -1,0 +1,22 @@
+Assignments:
+
+Expand the User Management API
+
+Objective:
+1. Extend the existing User Management API implemented in the tutorial.
+2. Implement additional functionality to manipulate user data in the MySQL database.
+
+Tasks:
+1. Implement a new endpoint to retrieve a single user by their ID. Create a GET API endpoint `/users/{id}` that accepts a path parameter representing the user ID and returns the corresponding user object.
+2. Implement a new endpoint to update a user's email address. Create a PUT API endpoint `/users/{id}/email` that accepts a path parameter for the user ID and a request body containing the updated email address. Update the user's email in the database and return the updated user object.
+3. Implement a new endpoint to delete a user. Create a DELETE API endpoint `/users/{id}` that accepts a path parameter for the user ID. Delete the user from the database and return a success message.
+4. Add validation to the POST and PUT endpoints. Ensure that the required fields (e.g., name and email) are provided in the request body, and return appropriate error responses for missing or invalid data.
+
+Submission:
+1. Submit the updated source code with the expanded API.
+2. Include any new classes or modifications made to existing classes.
+3. Include a brief document describing the changes made and any challenges faced during the assignment.
+
+This assignment will allow you to practice extending the functionality of the User Management API by implementing additional CRUD operations on user data in the MySQL database. It will help reinforce the concepts covered in the tutorial and give you hands-on experience in working with RESTful APIs, database integration, data validation, and unit testing.
+
+
