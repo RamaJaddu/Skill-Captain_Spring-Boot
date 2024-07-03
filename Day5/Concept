@@ -1,0 +1,31 @@
+Annotation in Spring Boot
+
+To Do
+
+Concept:
+
+In this tutorial, We will go through the annotations used so far in our concepts.
+
+1. `@RestController`: This annotation is used at the class level to indicate that the class serves as a RESTful controller. It combines the `@Controller` and `@ResponseBody` annotations. It is responsible for handling incoming HTTP requests and returning the response as JSON/XML, depending on the content negotiation.
+
+2. `@GetMapping`: This annotation is used at the method level to map a specific URL path and HTTP GET request to a method in the controller. It specifies the endpoint at which the method will be invoked to handle the GET request.
+
+3. `@PostMapping`: This annotation is used at the method level to map a specific URL path and HTTP POST request to a method in the controller. It specifies the endpoint at which the method will be invoked to handle the POST request.
+
+4. `@RequestBody`: This annotation is used as a parameter level annotation to indicate that the request body should be mapped to the annotated parameter. It binds the HTTP request body to a Java object, allowing you to access and process the data sent in the request body.
+
+5. `@PathVariable`: This annotation is used as a parameter level annotation to indicate that the value of a path variable should be bound to the annotated parameter. It extracts the value of the specified path variable from the URL and maps it to the parameter.
+
+6. `@Entity`: This annotation is used at the class level to indicate that the class represents a persistent entity that will be mapped to a database table. It is part of the Java Persistence API (JPA) and is used for object-relational mapping (ORM) with databases.
+
+7. `@Id`: This annotation is used at the field level to indicate the primary key of an entity. It marks the field as the unique identifier for the entity in the database table.
+
+8. `@GeneratedValue`: This annotation is used at the field level to specify the generation strategy for the value of an ID field. It allows you to automatically generate unique IDs for entities when they are persisted.
+
+These annotations are part of the Spring Framework and Spring Boot ecosystem. They provide a declarative way to define the behavior of your application, map HTTP requests to methods, handle request parameters and bodies, and perform object-relational mapping with databases. They help simplify the development of RESTful APIs and database operations by reducing the amount of boilerplate code that needs to be written.
+
+
+
+Resources:
+
+https://docs.spring.io/spring-boot/reference/web/servlet.html#web.servlet
