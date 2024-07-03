@@ -1,0 +1,75 @@
+API to store data in MySQL database
+
+To Do
+
+Concept:
+
+In this tutorial, we will demonstrate how to implement a POST API to store data in the MySQL database:
+
+Step 1: Create a POST API Endpoint
+1. Open the `HelloWorldController` class that you would have made while learning day 3 concept.
+2. Create a new method that handles the POST request to store user data.
+3. Annotate the method with `@PostMapping("/users")` to map it to the `/users` endpoint with HTTP POST method.
+4. Add a parameter of type `@RequestBody User` to receive the user data in the request body.
+
+Updated `HelloWorldController` class:
+
+ 
+package com.example.demo;
+
+import com.example.demo.model.User;
+import com.example.demo.repository.UserRepository;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+public class HelloWorldController {
+
+    private final UserRepository userRepository;
+
+    public HelloWorldController(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    @GetMapping("/users")
+    public List getUsers() {
+        return userRepository.findAll();
+    }
+
+    @PostMapping("/users")
+    public User createUser(@RequestBody User user) {
+        return userRepository.save(user);
+    }
+
+    @GetMapping("/")
+    public String helloWorld() {
+        return "Hello, World!";
+    }
+}
+
+Step 2: Test the POST API
+1. Use a tool like cURL or Postman to send a POST request to `http://localhost:8080/users`.
+2. Include a JSON payload in the request body containing the user data.
+3. The API should save the user data in the MySQL database and return the saved user object in the API response.
+
+Example JSON payload for the POST request:
+
+ 
+{
+  "name": "John",
+  "email": "john@example.com"
+}
+
+Step 3: Verify the Saved Data
+1. Send a GET request to `http://localhost:8080/users` to retrieve all users.
+2. The API response should include the newly created user in the list.
+
+Congratulations! You have extended the "Hello World" REST API to include a POST API endpoint that allows you to store user data in the MySQL database. This example demonstrates the usage of the `@PostMapping` annotation and the `@RequestBody` annotation to handle incoming POST requests and store the data using the Spring Data JPA repository. You can further enhance the API by adding validations, error handling, or additional endpoints to manipulate the user data.
+
+
+
+Resources:
+
+https://spring.io/guides/gs/accessing-data-jpa
+
