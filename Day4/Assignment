@@ -1,0 +1,13 @@
+Assignments:
+
+Extend the User Management API
+
+Objective:
+1. Extend the existing User Management API implemented in the tutorial to include additional functionality for storing and managing user data in the MySQL database.
+
+Tasks:
+1. Implement a new POST API endpoint `/users` to handle the creation of new users. Accept a JSON payload in the request body containing the user's name and email. Save the user data in the database and return the created user object in the API response.
+2. Add validation to the POST endpoint to ensure that the required fields (name and email) are provided in the request body. Return appropriate error responses for missing or invalid data.
+
+This assignment will allow you to practice extending the functionality of the User Management API by implementing additional CRUD operations on user data in the MySQL database. It will help reinforce the concepts covered in the tutorial and give you hands-on experience in working with RESTful APIs, database integration and data validation.
+
