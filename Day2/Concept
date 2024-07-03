@@ -1,0 +1,72 @@
+Make 'Hello World' Rest API
+
+To Do
+
+Concept:
+
+Step 1: Set Up the Development Environment
+i. Install Java and Maven on your system.
+
+Step 2: Create a New Project using Spring Initializr
+i. Open your web browser and go to [Spring Initializr](https://start.spring.io/).
+ii. Select the required Project Metadata
+iii. Choose the desired project type. For the tutorial, we will consider maven.
+iv. Set the language to Java.
+v. Specify the Spring Boot version.
+vi. Configure the project's dependencies:
+vii. Add the "Spring Web" dependency by typing "Web" in the search bar and selecting the corresponding option.
+viii. Optionally, you can add other dependencies as per your project requirements.
+ix. Click the "Generate" button to download the project as a ZIP file.
+
+Step 3: Extract and Import the Project
+i. Extract the downloaded ZIP file to a convenient location on your system.
+ii. Open your preferred IDE (such as IntelliJ IDEA or Eclipse).
+iii. Import the project as an existing Maven or Gradle project, depending on the build system you selected in Spring Initializr.
+
+Step 4: Create the Project Structure
+i. In the src/main/java directory, create a package for your application, e.g., com.example.demo.
+ii. Inside the package, create a Java class called HelloWorldController.
+
+Step 5: Implement the REST Controller
+i. Open the HelloWorldController class and annotate it with @RestController, which tells Spring that this class will handle RESTful requests.
+ii. Create a method within the class and annotate it with @GetMapping("/") to map the HTTP GET request to the root URL.
+iii. Inside the method, return a simple greeting message, such as "Hello, World!".
+
+The HelloWorldController class should look like this:
+ 
+package com.example.demo;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HelloWorldController {
+    
+    @GetMapping("/")
+    public String helloWorld() {
+        return "Hello, World!";
+    }
+}
+
+Step 6: Build and Run the Application
+i. Open your command line or terminal and navigate to the project's root directory.
+ii. Run the following command to build the project: `mvn clean install`.
+iii. Once the build is successful, run the application with the command: `mvn spring-boot:run`.
+iv. Spring Boot will start the embedded Tomcat server, and your application will be accessible at http://localhost:8080/.
+
+Step 7: Test the API
+i. Open your web browser or API testing tool (e.g., Postman).
+ii. Send a GET request to http://localhost:8080/.
+iii. You should receive a response with the "Hello, World!" greeting message.
+
+Congratulations! You have successfully implemented a "Hello World" REST API using Spring Boot, starting from creating a new project using Spring Initializr. This example demonstrates the process of setting up a Spring Boot project with the necessary dependencies and creating a simple RESTful API endpoint. You can now further enhance and expand your application by exploring additional Spring Boot features and adding more complex functionality.
+
+
+Resources:
+https://spring.io/guides/gs/rest-service
+
+
+
+
+
+
